@@ -65,6 +65,9 @@ main {
 h2, h3 {
     color: #003366;
 }
+h2{
+    text-align: center;
+}
 
 section {
     background-color: white;
