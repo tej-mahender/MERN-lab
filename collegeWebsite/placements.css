@@ -64,8 +64,67 @@ h1, h2 {
     margin: 20px 0;
 }
 
-/* Mission and Vision */
-.mission-vision {
+/* Placement Stats Section */
+.stats {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Company Marquee */
+.companies {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.marquee {
+    display: flex;
+    gap: 20px;
+}
+
+.marquee img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+} 
+
+/* Activities Section */
+.activities {
     margin: 20px auto;
     padding: 20px;
     max-width: 800px;
@@ -74,66 +133,15 @@ h1, h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.mission-vision h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #003366;
+.activities ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-.mission-vision p {
-    font-size: 1.1em;
+.activities li {
     margin: 10px 0;
+    font-size: 1.1em;
     color: #333;
-}
-
-/* Facilities Section */
-.facilities {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1200px;
-}
-
-.facilities h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #003366;
-}
-
-.facility-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.facility-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-    max-width: 200px;
-    flex: 1;
-    min-width: 150px;
-}
-
-.facility-img {
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.facility-item h3 {
-    font-size: 1.2em;
-    color: #003366;
-    margin-bottom: 5px;
-}
-
-.facility-item p {
-    font-size: 0.9em;
-    color: #555;
 }
 
 /* Footer */

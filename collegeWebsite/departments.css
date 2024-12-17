@@ -10,6 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+
 }
 
 a {
@@ -23,6 +24,7 @@ ul {
 
 header {
     background-color: #003366;
+
 }
 
 .header-img {
@@ -61,46 +63,87 @@ nav.menu a:hover {
 h1 {
     margin: 0;
 }
-
-/* Department card container */
 .department-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
-    gap: 20px;
+    gap: 30px;
+    padding: 20px;
+    background-color: #eef2f3;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
-/* Styling each department card */
+/* Individual department card */
 .department-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 260px;
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures footer stays at bottom */
+    padding: 15px;
+    height: 380px; /* Set consistent height for all cards */
+    position: relative;
 }
 
-/* Hover effect for the cards */
 .department-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Image inside the card */
 .department-image {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
-    border-bottom: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-/* Department name styling */
-.department-name {
-    font-size: 1.2em;
-    margin: 15px 0;
-    color: #333;
+/* Department name and title */
+.department-card h2 {
+    font-size: 1.5em;
+    color: #003366;
 }
+
+.department-card h3 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.department-card h4 {
+    font-size: 1em;
+    color: #888;
+}
+
+
+/* Card footer */
+.card-footer {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Contact link styling */
+.contact-link {
+    font-size: 16px;
+    color: #003366;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
 
 footer {
     background-color: #003366;
