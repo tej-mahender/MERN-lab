@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Prompt, Alert, and Confirm</title>
+</head>
+<body>
+    <h1>Welcome to Our Application!</h1>
+    <button id="start-btn">Start Interaction</button>
+
+    <script>
+        document.getElementById("start-btn").addEventListener("click", () => {
+            // Step 1: Use `prompt()` to ask for the user's name
+            const userName = prompt("What is your name?");
+            if (userName === null || userName.trim() === "") {
+                alert("You did not provide a name. Try again.");
+                return;
+            }
+
+            // Step 2: Use `alert()` to greet the user
+            alert(`Hello, ${userName}! Welcome to our application.`);
+
+            // Step 3: Use `confirm()` to ask if they want to proceed
+            const proceed = confirm("Do you want to proceed to the next step?");
+            if (proceed) {
+                alert("Great! Let's move forward.");
+                // Additional functionality can go here
+            } else {
+                alert("No problem! You can explore more options later.");
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</body>
+</html>

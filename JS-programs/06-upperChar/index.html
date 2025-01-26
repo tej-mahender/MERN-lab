@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter your name</h1>
+    <p></p>
+    <script>
+        function check(){
+            let username = prompt("Please enter your name:");
+            if(username && username.charAt(0) === username.charAt(0).toUpperCase())
+                alert("First letter is uppercase! Thank you")
+            else{
+                alert("The first letter should be uppercase. Please try again.");
+                check();
+            }
+        }
+        check();
+    </script>
+</body>
+</html>

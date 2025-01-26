@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Version</title>
+</head>
+<body>
+
+   <!--  Display version number of the used browser on the screen -->
+    <div class="browser-info">
+        <h1>Browser Information</h1>
+        <p id="browser-version">Detecting...</p>
+    </div>
+    <script>
+        document.getElementById("browser-version").textContent = navigator.appVersion;
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .browser-info {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .browser-info h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .browser-info p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</body>
+</html>

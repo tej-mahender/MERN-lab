@@ -1,0 +1,11 @@
+{
+  "name": "tej-h9-npm",
+  "version": "1.0.0",
+  "description": "This is a sample package to understand npm publication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tej",
+  "license": "ISC"
+}

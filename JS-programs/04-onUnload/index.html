@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userName;
+            userName = prompt("Please enter your name");
+            if(userName)
+                alert(`Welcome to MY PAGE, ${userName}`);
+            else
+                alert("You didn't enter your name");
+        
+        window.onbeforeunload = function(event) {
+            const message = `Goodbye, ${userName}!`;
+            event.returnValue = message; // Needed for Chrome to show the dialog
+            return message;
+        }
+    </script>
+    <h1>Welcome to my page</h1>
+    <p>This is an example page that greets you and says goodbye when you leave.</p>
+    <a href="https://example.com">Go to Example</a>
+
+</body>
+</html>

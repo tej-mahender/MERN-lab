@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            white-space: pre-wrap; /* Preserve line breaks */
+            text-align: center;
+            font-weight: bolder;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Text Analysis</h1>
+
+        <textarea id="userInput" placeholder="Enter text here..."></textarea>
+        <button onclick="analyzeText()">Submit</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function analyzeText() {
+            var userInput = document.getElementById("userInput").value;
+            
+            var charCount = userInput.length;
+            var wordCount = userInput.trim().split(/\s+/).length;
+            if (userInput.trim() === "") wordCount = 0;  
+            
+            var lineCount = userInput.split('\n').length;
+            document.getElementById('result').innerHTML = "Character count: " + charCount + "\nWord count: " + wordCount + "\nLine count: " + lineCount;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Example</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #444;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        input {
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            box-sizing: border-box;
+            transition: border 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        button {
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 250px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            padding: 10px;
+            background-color: #e7f5e7;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Input Example</h1>
+    <input type="text" id="userinput" placeholder="Type something"/>
+    <button onclick="storeAndDisplay()">Submit</button>
+    <div id="output"></div>
+    <script>
+        function storeAndDisplay() {
+            var userInput = document.getElementById("userinput").value;
+            document.getElementById('output').textContent = `You entered: ${userInput}`;
+        }
+    </script>
+</body>
+</html>

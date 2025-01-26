@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .employee-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            text-align: left;
+        }
+
+        .error {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Employee Information</h1>
+
+        <h3>Enter Employee Details</h3>
+        <input type="text" id="firstName" placeholder="First Name" />
+        <input type="text" id="lastName" placeholder="Last Name" />
+        <input type="number" id="age" placeholder="Age" />
+        <input type="text" id="department" placeholder="Department" />
+        <button onclick="addEmployee()">Add Employee</button>
+
+        <hr>
+
+        <h3>Enter First Name to Find Employee</h3>
+        <input type="text" id="findFirstName" placeholder="Enter First Name" />
+        <button onclick="findEmployee()">Find Employee</button>
+
+        <div class="employee-info" id="employeeInfo">
+            <h3>Employee Information</h3>
+            <p><strong>First Name:</strong> <span id="displayFirstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="displayLastName"></span></p>
+            <p><strong>Age:</strong> <span id="displayAge"></span></p>
+            <p><strong>Department:</strong> <span id="displayDepartment"></span></p>
+        </div>
+
+        <div class="error" id="error"></div>
+    </div>
+
+    <script>
+        let employees = [];
+
+        function addEmployee() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const age = document.getElementById("age").value.trim();
+            const department = document.getElementById("department").value.trim();
+
+            if (firstName === "" || lastName === "" || age === "" || department === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const employee = { firstName, lastName, age, department };
+            employees.push(employee);
+
+            document.getElementById("firstName").value = "";
+            document.getElementById("lastName").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("department").value = "";
+
+            alert("Employee added successfully!");
+        }
+
+        function findEmployee() {
+            const firstNameToFind = document.getElementById("findFirstName").value.trim();
+            const employee = employees.find(emp => emp.firstName.toLowerCase() === firstNameToFind.toLowerCase());
+
+            document.getElementById("employeeInfo").style.display = 'none';
+            document.getElementById("error").style.display = 'none';
+            document.getElementById("error").textContent = "";
+
+            if (employee) {
+                document.getElementById("displayFirstName").textContent = employee.firstName;
+                document.getElementById("displayLastName").textContent = employee.lastName;
+                document.getElementById("displayAge").textContent = employee.age;
+                document.getElementById("displayDepartment").textContent = employee.department;
+
+                document.getElementById("employeeInfo").style.display = 'block';
+            } else {
+                document.getElementById("error").style.display = 'block';
+                document.getElementById("error").textContent = "Employee not found";
+            }
+        }
+    </script>
+</body>
+</html>
