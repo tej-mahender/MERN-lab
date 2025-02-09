@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const filePath = path.join(__dirname, 'example.txt');
-//console.log(filePath)
 
 // Function to write to a file
 function writeFile() {

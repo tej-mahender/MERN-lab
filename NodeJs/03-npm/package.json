@@ -1,11 +1,23 @@
 {
   "name": "tej-h9-npm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is a sample package to understand npm publication",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tej",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tej-h9-npm": "^1.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tej-mahender/MERN-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tej-mahender/MERN-lab/issues"
+  },
+  "homepage": "https://github.com/tej-mahender/MERN-lab#readme"
 }
