@@ -1,21 +1,4 @@
-1. Create a new database as college database.
-2. Create students and faculty collections under college database
-3. Insert documents in students and faculty collections.
-4. Show the collections data
-5. Create ur own indexes for the documents
-6. Count documents in a collections
-7. Find first document in a collection
-8. Find document by id
-9. Find student and faculty by surname
-10. Display top 10 documents in the collection
-11. Students names of the students who go less than 40 marks different subjects
-12. Display names of the students based on their marks
-13. Update name of the student
-14. Delete the documents in student collection, whose marks less than 35
-15. Display the grades of the students
-16. Drop the collection of faculty
-17. Drop the database
-18. Execute query selectors (comparison, selectors, logical selectors) and list out the results on any collection.
+
     
 
 ```
