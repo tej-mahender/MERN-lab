@@ -14,8 +14,8 @@
 |        | Calculator        | [Link](https://tej-mahender.github.io/MERN-lab/02-JS-programs/09-calculator/) |
 |        | wordCount         | [Link](https://tej-mahender.github.io/MERN-lab/02-JS-programs/10-wordCount/) |
 |        | EmpDetails        | [Link](https://tej-mahender.github.io/MERN-lab/02-JS-programs/11-EmpDetails/) |
-| 3      | File Operations   | [Link](#link3)                    |
-|        | Calculator        | [Link](#link3)                    |
-|        | Npm Publication   | [Link](#link3)                    |
+| 3      | File Operations   |                   |
+|        | Calculator        |                   |
+|        | Npm Publication   |                   |
 |        | HTTP Client-Server| [Link](https://tej-mahender.github.io/MERN-lab/NodeJs/04-http/index.html)                  |
 
